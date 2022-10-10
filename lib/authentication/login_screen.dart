@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/authentication/signup_screen.dart';
 import 'package:get/get.dart';
 
 
@@ -259,7 +260,7 @@ child: Text(
       const Text("Don't have an Account?", style: TextStyle(color: Colors.black, fontSize: 16),),
 
       TextButton(onPressed: (){
-
+Get.to(SignUpScreen());
 
       }, child: const Text("SignUp Here",
       style: TextStyle(color: Colors.black, fontSize: 16),
