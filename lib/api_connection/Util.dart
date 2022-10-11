@@ -6,9 +6,10 @@ class Util
   static const hostConnectUser = "$hostConnect/user";
 
 
-
-  static const signUp = "$hostConnectUser/signup.php";
   static const validateEmail = "$hostConnectUser/validate_email.php";
+  static const signUp = "$hostConnectUser/signup.php";
+  static const login = "$hostConnectUser/login.php";
+
 
 
 

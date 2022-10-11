@@ -1,8 +1,15 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:food_app/api_connection/Util.dart';
 import 'package:food_app/authentication/signup_screen.dart';
+import 'package:food_app/fragments/dashboard_of_fragments.dart';
+import 'package:food_app/models/user.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 
-
+import '../user_shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -11,13 +18,52 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 
 }
-
 class _LoginScreenState extends State<LoginScreen> {
   var formKey = GlobalKey<FormState>();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   // as we are using getx so we are using .obs
   var isObscure = true.obs;
+
+  loginUser()
+  async {
+    try {
+      var res = await http.post(
+        Uri.parse(Util.login),
+        body: {
+          "user_email": emailController.text.trim(),
+          "user_password": passwordController.text.trim(),
+        },
+      );
+
+      if (res.statusCode == 200) {
+        var resBodyOfLogin = jsonDecode(res.body);
+        if (resBodyOfLogin['success'] == true) {
+          User userInfo = User.fromJson(resBodyOfLogin["userData"]);
+// now we have the Userdata in userInfo
+
+// now we will save the logged-in user data in shared preferences
+          await UserSharedPrefs.saveRememberUser(userInfo);
+
+          Fluttertoast.showToast(msg: "Logged-In Successfully");
+
+          Get.to(DashboardOfFragments());
+        }
+
+        else {
+          Fluttertoast.showToast(msg: "User Not Found");
+        }
+      }
+    }
+
+    catch (e) {
+
+
+
+      Fluttertoast.showToast(msg: e.toString());
+    }
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +263,6 @@ Obx(() =>         TextFormField(
 
           const SizedBox(height: 18),
 
-
           // Button
           Material(
 color: Colors.purpleAccent,
@@ -226,6 +271,11 @@ borderRadius: BorderRadius.circular(30),
             onTap: ()
             {
 
+              if(formKey.currentState!.validate())
+                {
+                  loginUser();
+
+                }
 
             },
 

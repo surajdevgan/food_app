@@ -100,6 +100,7 @@ try  {
        {
 
          Fluttertoast.showToast(msg: "SignUp Successfully");
+         Get.to(LoginScreen());
        }
 
      else{
