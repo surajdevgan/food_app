@@ -14,5 +14,6 @@
 
                                                                 Home Screen
 
-<img width="254" alt="Screen Shot 2022-10-19 at 10 42 41 PM" src="https://user-images.githubusercontent.com/26799447/196844193-7c9a502f-3d61-4e3f-b0f9-60593156993f.png">
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-10-19 at 22 45 52](https://user-images.githubusercontent.com/26799447/196844322-03a85377-ae1b-4df8-a7f1-6d82b49d4e3f.png)
+
 
