@@ -20,3 +20,7 @@
                                                               
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 13](https://user-images.githubusercontent.com/26799447/199350745-e0b474d1-4895-4b80-bbc9-096e36eeb8f1.png)
 
+
+                                                                  LogOut
+ 
+ ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 29](https://user-images.githubusercontent.com/26799447/199351102-52927392-1f48-4eda-82b6-c050d7e4803b.png)
