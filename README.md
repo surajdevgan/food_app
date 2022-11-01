@@ -16,4 +16,7 @@
 
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-10-19 at 22 45 52](https://user-images.githubusercontent.com/26799447/196844322-03a85377-ae1b-4df8-a7f1-6d82b49d4e3f.png)
 
+                                                              Profile Screen
+                                                              
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 13](https://user-images.githubusercontent.com/26799447/199350745-e0b474d1-4895-4b80-bbc9-096e36eeb8f1.png)
 
