@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:food_app/api_connection/Util.dart';
+import 'package:food_app/Util.dart';
 import 'package:food_app/authentication/login_screen.dart';
-import 'package:food_app/models/province_list_dropdown.dart';
+import 'package:food_app/models/provinces_dropdown_list_items.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
@@ -325,7 +325,7 @@ catch (e)
                                           },
                                           value: SelectedProvince,
                                           items:
-                                          ProvinceList.provinces().map((String value) {
+                                          ProvincesListItems.provinces().map((String value) {
                                             return DropdownMenuItem<String>(
                                               value: value,
                                               child: new Text(value),

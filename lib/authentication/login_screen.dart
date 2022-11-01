@@ -2,14 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:food_app/api_connection/Util.dart';
+import 'package:food_app/Util.dart';
 import 'package:food_app/authentication/signup_screen.dart';
-import 'package:food_app/fragments/dashboard_of_fragments.dart';
+import 'package:food_app/screens/screens_manager.dart';
 import 'package:food_app/models/user.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
-import '../user_shared_preferences.dart';
+import '../sharedPreferences/user_shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -43,11 +43,11 @@ class _LoginScreenState extends State<LoginScreen> {
 // now we have the Userdata in userInfo
 
 // now we will save the logged-in user data in shared preferences
-          await UserSharedPrefs.saveRememberUser(userInfo);
+          await UserSharedPrefs.saveUserInfo(userInfo);
 
           Fluttertoast.showToast(msg: "Logged-In Successfully");
 
-          Get.to(DashboardOfFragments());
+          Get.to(ScreensManager());
         }
 
         else {

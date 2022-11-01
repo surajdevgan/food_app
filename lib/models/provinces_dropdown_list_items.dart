@@ -1,4 +1,4 @@
-class ProvinceList {
+class ProvincesListItems {
 
   static List<String> provinces(){
     List<String> options = [
