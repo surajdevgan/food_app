@@ -1,16 +1,19 @@
 # food_app
+                                                              Libraries Used
+                                                              
+<img width="254" alt="Screen Shot 2022-10-19 at 10 42 41 PM" src="https://user-images.githubusercontent.com/26799447/196843915-ea02bff6-81cc-4d92-8f6e-f71fd636a131.png">
 
-A new Flutter project.
 
-## Getting Started
+                                                              SignUp Screen
 
-This project is a starting point for a Flutter application.
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-10-12 at 21 00 52](https://user-images.githubusercontent.com/26799447/195475163-77344119-5565-4d7f-ac55-98eb42ea91fe.png)
 
-A few resources to get you started if this is your first Flutter project:
+                                                               Login Screen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-10-12 at 21 01 22](https://user-images.githubusercontent.com/26799447/195475183-04e9ab50-6362-4f28-8b8a-f47295912e54.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+                                                                Home Screen
+
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-10-19 at 22 45 52](https://user-images.githubusercontent.com/26799447/196844322-03a85377-ae1b-4df8-a7f1-6d82b49d4e3f.png)
+
+
