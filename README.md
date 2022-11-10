@@ -1,4 +1,22 @@
 # food_app
+
+If you get error like fluttertoast' not found 
+
+Open Terminal Go Inside iOS folder in the Flutter project, run the following command
+pod deintegrate
+pod install
+
+For opening the camera or gallery, paste the following runtime permissions in info.plist file, present in YourFlutterProject -> ios -> Runner -> Info.plist
+
+<key>NSPhotoLibraryUsageDescription</key>
+    <string>To Use the Gallery</string>
+    <key>NSCameraUsageDescription</key>
+    <string>To Use the Camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>To Use Camera Audio</string>
+
+    
+
                                                               Libraries Used                                                          
                                                               
 <img width="366" alt="Screenshot 2022-11-10 at 4 32 05 AM" src="https://user-images.githubusercontent.com/26799447/201054186-25df207a-2c82-4f37-b2eb-42cdb6e426b2.png">
