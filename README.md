@@ -5,6 +5,7 @@ If you get error like fluttertoast' not found
 Open Terminal Go Inside iOS folder in the Flutter project, run the following command
 
 pod deintegrate
+
 pod install
 
 For opening the camera or gallery, paste the following runtime permissions in info.plist file, present in YourFlutterProject -> ios -> Runner -> Info.plist
