@@ -1,8 +1,7 @@
 # food_app
                                                               Libraries Used
                                                               
-![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 29](https://user-images.githubusercontent.com/26799447/201053810-89ca4f54-3e23-4b77-b2b1-ab6d4b64f6df.png)
-
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 29](https://user-images.githubusercontent.com/26799447/201054003-3998eb3a-76d6-43e7-bc50-b17acd9c051d.png)
 
                                                               SignUp Screen
 
