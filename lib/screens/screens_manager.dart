@@ -22,7 +22,7 @@ class ScreensManager extends StatelessWidget {
         ProfileScreen(),
       ];
 
-  List _navigationBittonProperties =
+  List _navigationButtonProperties =
   [
     {
       "active_icon" : Icons.home,
@@ -50,7 +50,7 @@ class ScreensManager extends StatelessWidget {
 
   ];
 
-  RxInt _indexnumber = 0.obs;
+  RxInt _indexNumber = 0.obs;
 
   @override
   Widget build(BuildContext context)
@@ -68,17 +68,17 @@ return Scaffold(
   backgroundColor: Colors.black,
   body: SafeArea(
 child: Obx(
-    () => _screens[_indexnumber.value]
+    () => _screens[_indexNumber.value]
 ),
 
   ),
   bottomNavigationBar: Obx(
 
       () => BottomNavigationBar (
-          currentIndex: _indexnumber.value,
+          currentIndex: _indexNumber.value,
           onTap: (value)
           {
-            _indexnumber.value = value;
+            _indexNumber.value = value;
           },
           showSelectedLabels: true,
           showUnselectedLabels: true,
@@ -86,7 +86,7 @@ child: Obx(
           unselectedItemColor: Colors.white24,
           items: List.generate(4, (index)
           {
-              var navBtnProperty = _navigationBittonProperties[index];
+              var navBtnProperty = _navigationButtonProperties[index];
               return BottomNavigationBarItem(
 backgroundColor: Colors.black,
                 icon: Icon(navBtnProperty["non_active_icon"]),
