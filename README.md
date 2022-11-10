@@ -1,7 +1,7 @@
 # food_app
                                                               Libraries Used
                                                               
-<img width="254" alt="Screen Shot 2022-10-19 at 10 42 41 PM" src="https://user-images.githubusercontent.com/26799447/196843915-ea02bff6-81cc-4d92-8f6e-f71fd636a131.png">
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 29](https://user-images.githubusercontent.com/26799447/201053810-89ca4f54-3e23-4b77-b2b1-ab6d4b64f6df.png)
 
 
                                                               SignUp Screen
