@@ -10,8 +10,7 @@ pod install
 
 For opening the camera or gallery in IOS devices, paste the following runtime permissions in info.plist file, present in YourFlutterProject -> ios -> Runner -> Info.plist
 
-<key>NSPhotoLibraryUsageDescription</key>
-
+    <key>NSPhotoLibraryUsageDescription</key>
     <string>To Use the Gallery</string>
     <key>NSCameraUsageDescription</key>
     <string>To Use the Camera</string>
