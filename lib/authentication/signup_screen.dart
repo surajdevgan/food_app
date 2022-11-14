@@ -138,7 +138,7 @@ catch (e)
                   SizedBox(
                     // this MediaQuery will automatically adjust the width according to the phone screen
                     width: MediaQuery.of(context).size.width,
-                    height: 285,
+                    height: 300,
                     child: Image.asset("images/login.jpeg"),
                   ),
 

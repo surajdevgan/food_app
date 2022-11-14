@@ -12,4 +12,7 @@ class Util
 
   static const trendingItems = "$hostConnectUser/trending.php";
 
+  static const getAllItems = "$hostConnectUser/getAllItems.php";
+
+
 }

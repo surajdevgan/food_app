@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_app/sharedPreferences/current_user_shared_prefs_data.dart';
-import 'package:food_app/screens/home_screen.dart';
+import 'package:food_app/home/home_screen.dart';
 import 'package:food_app/screens/order_screen.dart';
 import 'package:food_app/screens/profile_screen.dart';
 import 'package:food_app/screens/wishlist_screen.dart';

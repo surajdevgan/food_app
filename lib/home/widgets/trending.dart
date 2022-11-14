@@ -4,13 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_app/Util.dart';
+import 'package:food_app/itemdetails/itemdetailsscreen.dart';
 import 'package:food_app/models/item.dart';
+import 'package:food_app/home/widgets/seachbar.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 
-class HomeScreen extends StatelessWidget
-{
-  TextEditingController searchController = TextEditingController();
+class TrendingItems extends StatelessWidget {
+
 
 // This method is to get the trending items from the Items table, basically we getting the items with 4.4 or above rating
   // and this method will return us the List
@@ -22,7 +24,7 @@ class HomeScreen extends StatelessWidget
     try
     {
       var res = await http.post(
-        Uri.parse(Util.trendingItems)
+          Uri.parse(Util.trendingItems)
       );
 
       if(res.statusCode == 200)
@@ -43,125 +45,15 @@ class HomeScreen extends StatelessWidget
     }
     catch(errorMsg)
     {
-    Fluttertoast.showToast(msg: errorMsg.toString());
+      Fluttertoast.showToast(msg: errorMsg.toString());
 
     }
 
     return trendingFoodItemsList;
   }
 
-    // getTrending list method ends here
-
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-                // this to move the Trending to the left side
-
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-
-          const SizedBox(height: 16,),
-
-          //search bar widget
-          showSearchBarWidget(),
-
-          const SizedBox(height: 24,),
-
-          //trending-popular items
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 18),
-            child: Text(
-              "Trending",
-              style: TextStyle(
-                color: Colors.purpleAccent,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),
-            ),
-          ),
-          trendingMostPopularFoodItemWidget(context),
-
-          const SizedBox(height: 24,),
-
-          //all new collections/items
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 18),
-            child: Text(
-              "New Collections",
-              style: TextStyle(
-                color: Colors.purpleAccent,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),
-            ),
-          ),
-
-        ],
-      ),
-    );
-  }
-
-  Widget showSearchBarWidget()
-  {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18),
-      child: TextField(
-        style: const TextStyle(color: Colors.white),
-        controller: searchController,
-        decoration: InputDecoration(
-          prefixIcon: IconButton(
-            onPressed: ()
-            {
-
-            },
-            icon: const Icon(
-              Icons.search,
-              color: Colors.purpleAccent,
-            ),
-          ),
-          hintText: "Search best food here...",
-          hintStyle: const TextStyle(
-            color: Colors.grey,
-            fontSize: 12,
-          ),
-          suffixIcon: IconButton(
-            onPressed: ()
-            {
-
-            },
-            icon: const Icon(
-              Icons.shopping_cart,
-              color: Colors.purpleAccent,
-            ),
-          ),
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 2,
-              color: Colors.purple,
-            ),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 2,
-              color: Colors.purpleAccent,
-            ),
-          ),
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 10,
-          ),
-
-          // fillColor: Colors.redAccent,
-        ),         // filled: true,
-
-      ),
-    );
-  }
-
-  Widget trendingMostPopularFoodItemWidget(context)
-  {
     return FutureBuilder(
       future: getTrendingFoodItems(),
       builder: (context, AsyncSnapshot<List<Item>> dataSnapShot)
@@ -193,7 +85,8 @@ class HomeScreen extends StatelessWidget
                 return GestureDetector(
                   onTap: ()
                   {
-
+                    
+Get.to(ItemDetailsScreen(itemInfo: eachFoodItemData));
                   },
                   child: Container(
                     width: 200,
@@ -222,7 +115,7 @@ class HomeScreen extends StatelessWidget
 
                         //item imageView
                         // we use ClipRRect to curve the image from topleft and topright
-                        
+
                         ClipRRect(
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(22),
