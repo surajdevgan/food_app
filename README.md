@@ -34,7 +34,10 @@ For opening the camera or gallery in IOS devices, paste the following runtime pe
                                                                 Home Screen
                                                                 
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-14 at 04 40 19](https://user-images.githubusercontent.com/26799447/201627074-588e13e0-65b3-452d-8999-d8047d9129b0.png)
+                                                              ItemInfo Screen
 
+![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-14 at 04 42 47](https://user-images.githubusercontent.com/26799447/201627601-3b5386ee-49fa-41d3-9761-e605170eeaa1.png)
+                                                              
                                                                Profile Screen
                                                               
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-01 at 17 55 13](https://user-images.githubusercontent.com/26799447/199350745-e0b474d1-4895-4b80-bbc9-096e36eeb8f1.png)
