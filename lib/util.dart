@@ -2,8 +2,8 @@ class Util
 
 {
 
-  static const hostConnect = "http://192.168.2.107/api_food_app";
-  static const hostConnectUser = "$hostConnect/user";
+  static const hostConnect = "https://10.101.1.47/api_food_app";
+  static const hostConnectUser = "$hostConnect/use`1qr";
 
 
   static const validateEmail = "$hostConnectUser/validate_email.php";
@@ -13,6 +13,11 @@ class Util
   static const trendingItems = "$hostConnectUser/trending.php";
 
   static const getAllItems = "$hostConnectUser/getAllItems.php";
+
+  static const cartItems = "$hostConnectUser/AddToCart.php";
+  static const getCartItems = "$hostConnectUser/GetCartItems.php";
+
+
 
 
 }

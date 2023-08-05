@@ -86,6 +86,7 @@ class AllFoodItems extends StatelessWidget {
               {
                 Item eachFodItemRecord = dataSnapShot.data![index];
 
+
                 return GestureDetector(
                   onTap: ()
                   {
@@ -146,7 +147,7 @@ class AllFoodItems extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 12, right: 12),
                                       child: Text(
-                                        "\$ " + eachFodItemRecord.item_price.toString(),
+                                        "\$ ${eachFodItemRecord.item_prices[0].trim().replaceAll("[", "").replaceAll("]", "")}",
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(

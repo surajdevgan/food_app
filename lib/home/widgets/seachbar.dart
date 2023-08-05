@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_app/Util.dart';
+import 'package:food_app/cart/cart_screen.dart';
 import 'package:food_app/models/item.dart';
 import 'package:http/http.dart' as http;
+import 'package:get/get.dart';
+
 
 class SearchBar extends StatelessWidget {
 
@@ -37,6 +40,7 @@ class SearchBar extends StatelessWidget {
           suffixIcon: IconButton(
             onPressed: ()
             {
+              Get.to(CartScreen());
 
             },
             icon: const Icon(

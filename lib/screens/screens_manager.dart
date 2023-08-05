@@ -65,7 +65,7 @@ class ScreensManager extends StatelessWidget {
         builder: (controller)
     {
 return Scaffold(
-  backgroundColor: Colors.black,
+  backgroundColor: Colors.black54,
   body: SafeArea(
 child: Obx(
     () => _screens[_indexNumber.value]

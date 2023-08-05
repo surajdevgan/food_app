@@ -32,10 +32,9 @@ class TrendingItems extends StatelessWidget {
         var responseBodyOfTrending = jsonDecode(res.body);
         if(responseBodyOfTrending["success"] == true)
         {
-          (responseBodyOfTrending["foodItemsData"] as List).forEach((eachRecord)
-          {
+          for (var eachRecord in (responseBodyOfTrending["foodItemsData"] as List)) {
             trendingFoodItemsList.add(Item.fromJson(eachRecord));
-          });
+          }
         }
       }
       else
@@ -72,7 +71,7 @@ class TrendingItems extends StatelessWidget {
             ),
           );
         }
-        if(dataSnapShot.data!.length > 0)
+        if(dataSnapShot.data!.isNotEmpty)
         {
           return SizedBox(
             height: 260,
@@ -167,7 +166,8 @@ Get.to(ItemDetailsScreen(itemInfo: eachFoodItemData));
                                     width: 10,
                                   ),
                                   Text(
-                                    eachFoodItemData.item_price.toString(),
+                                    "\$ ${eachFoodItemData.item_prices[0].trim().replaceAll("[", "").replaceAll("]", "")}",
+
                                     style: const TextStyle(
                                       color: Colors.purpleAccent,
                                       fontSize: 18,
@@ -202,7 +202,7 @@ Get.to(ItemDetailsScreen(itemInfo: eachFoodItemData));
                                   const SizedBox(width: 8,),
 
                                   Text(
-                                    "(" + eachFoodItemData.item_rating.toString() + ")",
+                                    "(${eachFoodItemData.item_rating})",
                                     style: const TextStyle(
                                       color: Colors.grey,
                                     ),
